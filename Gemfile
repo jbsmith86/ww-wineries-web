@@ -9,6 +9,10 @@ gem 'sqlite3'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
 
+# Deployment
+gem 'daemonize_rails'
+gem 'unicorn'
+
 # Bourbon for styling
 gem 'bourbon'
 gem 'neat'
