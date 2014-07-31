@@ -1,0 +1,26 @@
+<h1>Wineries</h1>
+
+<table class="table-borders">
+  <thead>
+    <tr>
+      <th>Winery</th>
+      <th>Address</th>
+      <th>City</th>
+      <th>State</th>
+      <th>Zip</th>
+      <th>Phone</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @wineries.each do |winery| %>
+      <tr>
+        <td><%= link_to winery.name, edit_winery_path(winery) %></td>
+        <td><%= winery.address %></td>
+        <td><%= winery.city %></td>
+        <td><%= winery.state %></td>
+        <td><%= winery.zip %></td>
+        <td><%= winery.phone %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

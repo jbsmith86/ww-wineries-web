@@ -1,0 +1,27 @@
+<div class="winery-form">
+<%= form_for(@winery) do |f| %>
+  <%= f.label "Name:" %>
+  <%= f.text_field :name %>
+  <%= f.label "Address:" %>
+  <%= f.text_field :address %>
+  <%= f.label "City:" %>
+  <%= f.text_field :city %>
+  <%= f.label "State:" %>
+  <%= f.text_field :state %>
+  <%= f.label "Zip:" %>
+  <%= f.text_field :zip %>
+  <%= f.label "Latitude:" %>
+  <%= f.text_field :latitude %>
+  <%= f.label "Longitude:" %>
+  <%= f.text_field :longitude %>
+  <%= f.label "Phone Number:" %>
+  <%= f.text_field :phone %>
+  <%= f.label "Website:" %>
+  <%= f.text_field :website %>
+  <%= f.label "Twitter:" %>
+  <%= f.text_field :twitter %>
+  <%= f.label "Facebook:" %>
+  <%= f.text_field :facebook %><br>
+  <%= f.submit "Submit", class: "button" %>
+<% end %>
+</div>
