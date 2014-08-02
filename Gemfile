@@ -14,6 +14,10 @@ gem 'daemonize_rails'
 gem 'unicorn'
 gem 'pg'
 
+# S3 image uploads
+gem 'paperclip'
+gem 'aws-sdk'
+
 # Bourbon for styling
 gem 'bourbon'
 gem 'neat'

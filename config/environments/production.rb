@@ -77,4 +77,14 @@ WwWineriesWeb::Application.configure do
 
   # Use default logging formatter so that PID and timestamp are not suppressed.
   config.log_formatter = ::Logger::Formatter.new
+
+  # Paperclip
+  config.paperclip_defaults = {
+    :storage => :s3,
+    :s3_credentials => {
+      :bucket => S3_KEYS['bucket'],
+      :access_key_id => S3_KEYS['access_key_id'],
+      :secret_access_key => S3_KEYS['secret_access_key']
+    }
+  }
 end
