@@ -79,6 +79,7 @@ WwWineriesWeb::Application.configure do
   config.log_formatter = ::Logger::Formatter.new
 
   # Paperclip
+  S3_KEYS = YAML.load_file("#{::Rails.root}/config/keys/amazon_s3.yml")[::Rails.env]
   config.paperclip_defaults = {
     :storage => :s3,
     :s3_credentials => {
