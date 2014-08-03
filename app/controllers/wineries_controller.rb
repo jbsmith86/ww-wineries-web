@@ -28,7 +28,7 @@ class WineriesController < ApplicationController
 
   def update
     @winery = Winery.find(params[:id])
-    if @winery.update(alert_params)
+    if @winery.update(winery_params)
     end
   end
 
