@@ -1,5 +1,7 @@
 <div class="winery-form">
 <%= form_for(@winery) do |f| %>
+  <%= f.label "Logo:" %>
+  <%= f.file_field :logo %>
   <%= f.label "Name:" %>
   <%= f.text_field :name %>
   <%= f.label "Address:" %>

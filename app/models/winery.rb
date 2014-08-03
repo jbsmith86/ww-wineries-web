@@ -1,6 +1,7 @@
 require 'csv'
 
 class Winery < ActiveRecord::Base
+  has_attached_file :logo
 
   def self.import(file_path)
     CSV.foreach(file_path, headers: true) do |row|
