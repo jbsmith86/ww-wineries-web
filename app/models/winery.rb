@@ -2,6 +2,7 @@ require 'csv'
 
 class Winery < ActiveRecord::Base
   has_attached_file :logo
+  validates_attachment_content_type :logo, :content_type => ["image/jpg", "image/jpeg", "image/png", "image/gif"]
 
   def self.import(file_path)
     CSV.foreach(file_path, headers: true) do |row|

@@ -29,6 +29,7 @@ class WineriesController < ApplicationController
   def update
     @winery = Winery.find(params[:id])
     if @winery.update(winery_params)
+      redirect_to root_path
     end
   end
 
@@ -41,6 +42,6 @@ class WineriesController < ApplicationController
   private
 
   def winery_params
-    params.require(:friend).permit(:logo, :name, :address, :city, :state, :zip, :latitude, :longitude, :phone, :website, :twitter, :facebook)
+    params.require(:winery).permit(:logo, :name, :address, :city, :state, :zip, :latitude, :longitude, :phone, :website, :twitter, :facebook)
   end
 end
