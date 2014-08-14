@@ -1,7 +1,7 @@
 require 'csv'
 
 class Winery < ActiveRecord::Base
-  has_attached_file :logo
+  has_attached_file :logo, :styles => { :pin => "35x35" }
   validates_attachment_content_type :logo, :content_type => ["image/jpg", "image/jpeg", "image/png", "image/gif"]
 
   def self.import(file_path)
